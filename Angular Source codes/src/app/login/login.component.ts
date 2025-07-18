@@ -13,13 +13,14 @@ export class LoginComponent {
 
   constructor(private router: Router, private loginService: LoginService) {}
 
-  login(): void {
-    const isAuthenticated = this.loginService.login(this.username, this.password);
-    if (isAuthenticated) {
-      this.loginService.setLoggedIn(true); // Set the flag indicating user is logged in
-      this.router.navigate(['/employees']);
-    } else {
-      alert('Invalid credentials. Please try again.');
-    }
+login(): void {
+  const isAuthenticated = this.loginService.login(this.username, this.password);
+  if (isAuthenticated) {
+    this.loginService.setLoggedIn(true); // Set the flag indicating user is logged in
+    this.router.navigate(['/dashboard']); // redirect to dashboard instead of employee list
+  } else {
+    alert('Invalid credentials. Please try again.');
   }
+}
+
 }

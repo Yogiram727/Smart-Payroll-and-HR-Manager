@@ -10,22 +10,23 @@ import { UpdateSalaryComponent } from './update-salary/update-salary.component';
 import { SalaryDetailsComponent } from './salary-details/salary-details.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth-guard.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path:'employees',component:EmployeeListComponent,canActivate:[AuthGuard]},
-  {path:'create-employee',component:CreateEmployeeComponent,canActivate:[AuthGuard]},
-  {path:'salaries',component:SalaryCalculationComponent,canActivate:[AuthGuard]},
- // {path:'',redirectTo:'employees',pathMatch:'full'},
-  {path:'update-employee/:id',component:UpdateEmployeeComponent,canActivate:[AuthGuard]},
-  {path:'employee-details/:id',component:EmployeeDetailsComponent,canActivate:[AuthGuard]},
-  {path:'add-salary',component:AddSalaryComponent,canActivate:[AuthGuard]},
-  {path:'update-employee/:id',component:UpdateEmployeeComponent,canActivate:[AuthGuard]},
-  {path:'update-salary/:id',component:UpdateSalaryComponent,canActivate:[AuthGuard]},
-  {path:'salary-details/:id',component:SalaryDetailsComponent,canActivate:[AuthGuard]},
-  {path:'login',component:LoginComponent},
-  {path:'',redirectTo:'/login',pathMatch:'full'},
-  {path:'**',redirectTo:'/login',pathMatch:'full'}
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'employees', component: EmployeeListComponent, canActivate: [AuthGuard] },
+  { path: 'create-employee', component: CreateEmployeeComponent, canActivate: [AuthGuard] },
+  { path: 'salaries', component: SalaryCalculationComponent, canActivate: [AuthGuard] },
+  { path: 'update-employee/:id', component: UpdateEmployeeComponent, canActivate: [AuthGuard] },
+  { path: 'employee-details/:id', component: EmployeeDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'add-salary', component: AddSalaryComponent, canActivate: [AuthGuard] },
+  { path: 'update-salary/:id', component: UpdateSalaryComponent, canActivate: [AuthGuard] },
+  { path: 'salary-details/:id', component: SalaryDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login', pathMatch: 'full' }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

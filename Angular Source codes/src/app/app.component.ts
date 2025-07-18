@@ -8,7 +8,7 @@ import { LoginService } from './login.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Payroll Management System';
+  title = 'Smart Payroll and HR Manager';
 
   constructor(private router: Router, private loginService: LoginService) {}
 

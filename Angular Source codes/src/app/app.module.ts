@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { UpdateSalaryComponent } from './update-salary/update-salary.component';
 import { SalaryDetailsComponent } from './salary-details/salary-details.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardComponent } from './auth-guard/auth-guard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { AuthGuardComponent } from './auth-guard/auth-guard.component';
     UpdateSalaryComponent,
     SalaryDetailsComponent,
     LoginComponent,
-    AuthGuardComponent
+    AuthGuardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgChartsModule,
     HttpClientModule,
     FormsModule,
   ],

@@ -1,46 +1,53 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <ul class="navbar-nav">
+<div class="app-wrapper">
+  <nav class="navbar navbar-expand-sm custom-navbar shadow-sm">
+    <div class="container-fluid">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item">
-            <a routerLink="employees" routerLinkActive="active" class="nav-link">Employee List</a>
-
+          <a routerLink="dashboard" routerLinkActive="active" class="nav-link"
+            >Dashboard</a
+          >
         </li>
         <li class="nav-item">
-            <a routerLink="create-employee" routerLinkActive="active" class="nav-link">Add Employee</a>
-
+          <a routerLink="employees" routerLinkActive="active" class="nav-link"
+            >Employee List</a
+          >
         </li>
-
         <li class="nav-item">
-            <a routerLink="salaries" routerLinkActive="active" class="nav-link">View Salary</a>
+          <a
+            routerLink="create-employee"
+            routerLinkActive="active"
+            class="nav-link"
+            >Add Employee</a
+          >
         </li>
-
         <li class="nav-item">
-            <a routerLink="add-salary" routerLinkActive="active" class="nav-link">Add Salary</a>
+          <a routerLink="salaries" routerLinkActive="active" class="nav-link"
+            >View Salary</a
+          >
         </li>
-
         <li class="nav-item">
-            <button (click)="logout()" class="nav-link logout-button">Logout</button>
-          </li>
-    </ul>
-
-</nav>
-
-<h1 class="text-center">{{title}}</h1>
-
-<div class="container">
-   <router-outlet></router-outlet>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<footer class="footer">
-    <div class="container">
-        <span> 
-            
-            All Right Reserved 2023 @NAST</span>
-
+          <a routerLink="add-salary" routerLinkActive="active" class="nav-link"
+            >Add Salary</a
+          >
+        </li>
+      </ul>
+      <button
+        (click)="logout()"
+        class="btn btn-warning fw-bold px-3 logout-button"
+      >
+        Logout
+      </button>
     </div>
-    
-</footer>
+  </nav>
+
+  <main class="container my-4 flex-grow-1">
+    <h1 class="text-center mt-4">{{ title }}</h1>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="footer mt-auto py-3 bg-dark text-white">
+    <div class="container text-center">
+      <span>© 2025 All Rights Reserved @MUJOnline</span>
+    </div>
+  </footer>
+</div>
