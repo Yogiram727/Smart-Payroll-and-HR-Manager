@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'update-salary/:id', component: UpdateSalaryComponent, canActivate: [AuthGuard] },
   { path: 'salary-details/:id', component: SalaryDetailsComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', redirectTo: '/login', pathMatch: 'full' }
 ];
 
