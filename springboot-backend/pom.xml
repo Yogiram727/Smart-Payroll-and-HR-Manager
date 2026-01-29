@@ -15,7 +15,7 @@
     <artifactId>springboot-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-backend</name>
-    <description>Smart Payroll & HR Manager Backend</description>
+<description>Smart Payroll &amp; HR Manager Backend</description>
 
     <properties>
         <java.version>17</java.version>
